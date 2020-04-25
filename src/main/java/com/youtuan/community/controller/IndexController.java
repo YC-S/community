@@ -1,3 +1,8 @@
+/*
+ * YouTuan Inc.
+ * Copyright (c) 2019-2020 All Rights Reserved.
+ */
+
 package com.youtuan.community.controller;
 
 import org.springframework.stereotype.Controller;
