@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8" content="text/html">
   <title>友团社区</title>
@@ -21,13 +21,11 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="https://github.com/login/oauth/authorize?client_id=6cc42086757653a3b7de&redirect_uri=http://localhost:8081/callback&scope=user&state=1">登陆<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item dropdown">
+
+      <li class="nav-item dropdown" th:if="${session.user != null}">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          我
+           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" th:text="
+           ${session.user.getName()}">
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">消息中心</a>
@@ -35,6 +33,12 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">退出登录</a>
         </div>
+      </li>
+
+      <li class="nav-item active" th:unless="${session.user != null}">
+        <a class="nav-link"
+           href="https://github.com/login/oauth/authorize?client_id=6cc42086757653a3b7de&redirect_uri=http://localhost:8081/callback&scope=user&state=1">登陆<span
+            class="sr-only">(current)</span></a>
       </li>
 
     </ul>
