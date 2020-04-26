@@ -12,6 +12,7 @@
 1. [Git](https://git-scm.com/)
 2. [Intellij](https://www.jetbrains.com/idea/)
 3. [Visual Paradigm](https://www.visual-paradigm.com/)
+4. [Flyway](https://flywaydb.org/)
 
 ## 脚本
 ```sql
@@ -26,4 +27,7 @@ create table USER
 	constraint USER_PK
 		primary key (ID)
 );
+```
+```bash
+mvn flyway:migrate
 ```

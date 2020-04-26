@@ -1,0 +1,21 @@
+/*
+ * YouTuan Inc.
+ * Copyright (c) 2019-2020 All Rights Reserved.
+ */
+
+.main {
+  background: #ffffff;
+  width: 97%;
+  margin: 30px;
+  height: 1200px;
+}
+
+body {
+  background: #efefef;
+}
+.btn-publish {
+  float: right;
+  margin-bottom: 15px;
+}
+
+
