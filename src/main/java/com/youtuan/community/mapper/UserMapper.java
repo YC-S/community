@@ -19,14 +19,13 @@ public interface UserMapper {
 
     /**
      * 添加user
-     * @param user
      */
     @Insert("insert into user (name, account_id, token, gmt_create, gmt_modified) values (#{name}, #{accountId}, #{token}, #{gmtCreate}, #{gmtModified})")
     void insert(User user);
 
     /**
      * 寻找session里面的token
-     * @param token
+     *
      * @return User
      */
     @Select("select * from user where token = #{token}")
