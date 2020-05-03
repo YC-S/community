@@ -13,6 +13,7 @@
 2. [Intellij](https://www.jetbrains.com/idea/)
 3. [Visual Paradigm](https://www.visual-paradigm.com/)
 4. [Flyway](https://flywaydb.org/)
+5. [Lombok](https://projectlombok.org/)
 
 ## 脚本
 ```sql
